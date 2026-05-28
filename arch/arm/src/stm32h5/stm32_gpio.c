@@ -78,6 +78,9 @@ const uint32_t g_gpiobase[STM32H5_NPORTS] =
 #if STM32H5_NPORTS > 7
   STM32_GPIOH_BASE,
 #endif
+#if STM32H5_NPORTS > 8
+  STM32_GPIOI_BASE,
+#endif
 };
 
 /****************************************************************************
