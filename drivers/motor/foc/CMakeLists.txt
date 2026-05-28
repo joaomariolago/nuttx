@@ -35,6 +35,10 @@ if(CONFIG_MOTOR_FOC)
     list(APPEND SRCS drv8301.c)
   endif()
 
+  if(CONFIG_MOTOR_FOC_DRV8323)
+    list(APPEND SRCS drv8323.c)
+  endif()
+
   target_include_directories(drivers PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
   target_sources(drivers PRIVATE ${SRCS})
 endif()

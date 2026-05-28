@@ -48,4 +48,12 @@ config MOTOR_FOC_DRV8301
 	---help---
 		Enables FOC power-stage DRV8301 driver.
 
+config MOTOR_FOC_DRV8323
+	bool "DRV8323S Three-Phase Smart Gate Driver (SPI)"
+	default n
+	select MOTOR_FOC_FOCPWR
+	---help---
+		Enables FOC power-stage driver for TI DRV8323S
+		(SPI variant with 3 integrated current-sense amplifiers).
+
 endif #MOTOR_FOC
